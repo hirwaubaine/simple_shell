@@ -1,17 +1,18 @@
 #include "shell.h"
+#define MAX_COMMAND 100
 
 void prompt(char **agv, char **environ)
 {
 	char *strg = NULL;
-	int i, status;
-	ssize_t n_char;
+	int i, status, j;
 	size_t n = 0;
-	char *argv[] = {NULL, NULL};
+	ssize_t n_char;
+	char *argv[MAX_COMMAND];
 	pid_t child_pid;
 
 	while (1)
 	{
-		printf("simple_shell$ ");
+		printf("cisfun$ ");
 
 		n_char = getline(&strg, &n, stdin);
 		if (n_char == -1)
@@ -24,8 +25,15 @@ void prompt(char **agv, char **environ)
 		{
 			if (strg[i] == '\n')
 				strg[i] = 0;
+			i++;
 		}
-		argv[0] = strg;
+		j = 0;
+		argv[j] = strtok(strg, " ");
+		while (strg[j])
+		{
+			j++;
+			argv[j] = strtok(NULL, " ");
+		}
 		child_pid = fork();
 		if (child_pid == -1)
 		{
