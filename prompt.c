@@ -1,6 +1,13 @@
 #include "shell.h"
 #define MAX_COMMAND 100
 
+/**
+ * prompt - Prompt for the shell built
+ * @agv: array of argument
+ * @environ: environment variables
+ * Rerurn: always 0
+ */
+
 void prompt(char **agv, char **environ)
 {
 	char *strg = NULL;
