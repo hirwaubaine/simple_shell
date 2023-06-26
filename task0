@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ * Description: the program that prints a line
+ * Return: Always 0
+ */
+
+int main(void)
+{
+    printf("Hello Betty I hope this makes you proud,\n");
+return (0);
+}
