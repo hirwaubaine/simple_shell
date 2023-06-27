@@ -13,6 +13,7 @@
  * @agv: variable arguments
  * @environ: environment variables
  */
+int main(int argc, char *argv[], char *environ[]);
 void prompt(char **agv, char **environ);
 
 #endif
