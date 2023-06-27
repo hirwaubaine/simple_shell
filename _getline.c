@@ -38,7 +38,7 @@ ssize_t _getline(char **line, size_t *n, FILE *stream)
 			}
 		}
 		strcat(*line, str);
-		if ((*lineptr)[strlen(*line) - 1] == '\n')
+		if ((*line)[strlen(*line) - 1] == '\n')
 			return (strlen(*line));
 	}
 	return (0);

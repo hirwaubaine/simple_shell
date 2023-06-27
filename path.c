@@ -19,7 +19,7 @@ char *path(char *strr)
 		tmp = entry->d_name;
 		if (_strcmp(tmp, strr) == 0)
 		{
-			path = _strcat("/bin/", strr);
+			pth = _strcat("/bin/", strr);
 			closedir(dir);
 			return (pth);
 		}

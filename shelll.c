@@ -25,12 +25,12 @@ int main(int argc, char *argv[], char *environ[])
 		if (*ln != '\n')
 		{
 			arstr = split_line(ln);
-			imbt = builtin(arr_str);
+			imbt = builtinm(arstr);
 			command_path = path(arstr[0]);
 			if (command_path)
 				arstr[0] = command_path;
 			else
-				status = path_check(arstr[0]);
+				status = pathchk(arstr[0]);
 			if (status == 1 || command_path)
 				exec_command(arstr, argv, environ);
 				if (status != 1 && !command_path && imbt == 0)
@@ -38,6 +38,6 @@ int main(int argc, char *argv[], char *environ[])
 		}
 	}
 	free(arstr);
-	fre(ln);
+	free(ln);
 	exit(0);
 }
