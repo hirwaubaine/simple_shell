@@ -8,6 +8,11 @@
 #include <sys/types.h>
 #include <string.h>
 
+/**
+ * prompt - Promtpt of the shell
+ * @agv: variable arguments
+ * @environ: environment variables
+ */
 void prompt(char **agv, char **environ);
 
 #endif
