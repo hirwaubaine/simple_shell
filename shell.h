@@ -61,7 +61,7 @@ int add(int n1, int n2);
 
 ssize_t _getline(char **lineptr, size_t *n, FILE *strm);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-char **_strtok(char *line, char *dlm);
+char **_strtok(char *line, char *delim);
 char *location(char *command);
 list_t *path_dir(char *path);
 int execute(char **args, char **front);
@@ -122,4 +122,5 @@ void help_setenv(void);
 void help_unsetenv(void);
 void help_history(void);
 int proc_file_commands(char *file_path, int *exec_ret);
+
 #endif
