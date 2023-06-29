@@ -99,7 +99,7 @@ void free_alias_list(alias_t *head);
 list_t *add_node_end(list_t **head, char *dir);
 void free_list(list_t *head);
 
-int create_error(char **args, int err);
+int create_error(char **args, int er);
 char *error_env(char **args);
 char *error_1(char **args);
 char *error_2_exit(char **args);
